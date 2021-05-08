@@ -1,0 +1,43 @@
+.home {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 550px;
+  padding: 40px 30px 30px;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+
+  &-mail {
+    margin-bottom: 4em;
+  }
+
+  &-connect {
+    margin-top: 2em;
+  }
+
+  &-deco {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+ ion-item {
+   display: flex;
+   flex-direction: column;
+ }
+
+ ion-row {
+   justify-content: space-between;
+   align-items: center;
+ }
+
+ ion-label {
+   font-weight: bold;
+ }
+}
