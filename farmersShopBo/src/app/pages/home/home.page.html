@@ -21,20 +21,17 @@
       <div class="home-password">
         <ion-row class="ion-padding-bottom">
           <ion-label>Mot de passe <span class="required">*</span></ion-label>
-          <ion-label class="span-link">Afficher le mot de passe</ion-label>
+          <button class="span-link">Afficher le mot de passe</button>
         </ion-row>
         <ion-input class="ion-padding input-spe" placeholder="Saisissez votre mot de passe"></ion-input>
       </div>
       <ion-row class="home-connect ion-justify-content-center">
-        <button class="btn btn-primary">Se connecter</button>
+        <button class="btn btn-primary" [routerLink]="['/shop']">Se connecter</button>
       </ion-row>
     </div>
   </ion-list>
   <div class="home-deco">
-    
-      <img src="../../../assets/images/bo-home-left.jpg" alt="Back Office décoration" width="300" height="300">
-
-      <img src="../../../assets/images/bo-home-right.jpg" alt="Back Office décoration" width="350" height="240px">
-    
+    <img src="../../../assets/images/bo--home-left.png" alt="Back Office décoration" width="300" height="300">
+    <img src="../../../assets/images/bo--home-right" alt="Back Office décoration" width="400" height="300px">
   </div>
 </ion-content>

@@ -1,0 +1,27 @@
+.menu {
+  min-height: 270px;
+
+  ion-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  ion-icon {
+    width: 26px;
+    height: 26px;
+    margin-bottom: 20px;
+    color: var(--ion-color-secondary);
+    cursor: pointer;
+
+    &[name="help-circle"] {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 0;
+    }
+  }
+}

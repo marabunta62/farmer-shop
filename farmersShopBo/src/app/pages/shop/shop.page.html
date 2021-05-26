@@ -1,0 +1,67 @@
+<!-- <ion-grid>
+  <ion-col>
+    <app-menu></app-menu>
+  </ion-col>
+  <ion-col size="10">
+    2 of 3 <small>(size="8")</small>
+  </ion-col>
+</ion-grid> -->
+
+<ion-content class="shop">
+  <div class="shop-farmersshop"><img src="../../../assets/images/FarmersShop_newLogo.png"></div>
+  <div class="shop-menu">
+    <app-menu></app-menu>
+  </div>
+  <div class="shop-contrib">
+    <h2>Voici votre espace dédié, vous avez la possibilité d’y contribuer 
+    les informations de votre boutique.
+    </h2>
+    <div class="shop-contrib__items">
+      <p>Les champs marqués d'un <span class="required">*</span> sont obligatoires.</p>
+      <div class="shop-contrib__items--top">
+        <div>
+          <ion-row>
+            <ion-label class="ion-padding-bottom">Nom de la boutique <span class="required">*</span></ion-label>
+          </ion-row>
+          <ion-input class="ion-padding input-spe" placeholder="Saisissez le nom de votre boutique"></ion-input>
+        </div>
+        <div>
+          <ion-row>
+            <ion-label class="ion-padding-bottom">Numéro de téléphone <span class="required">*</span></ion-label>
+          </ion-row>
+          <ion-input class="ion-padding input-spe" placeholder="Saisissez le numéro de votre boutique"></ion-input>
+        </div>
+        <div>
+          <ion-row>
+            <ion-label class="ion-padding-bottom">Adresse de la boutique <span class="required">*</span></ion-label>
+          </ion-row>
+          <ion-input class="ion-padding input-spe" placeholder="Saisissez l'adresse de votre boutique"></ion-input>
+        </div>
+      </div>
+      <div class="shop-contrib__items--bottom">
+        <div class="shop-left">
+          <ion-row>
+            <ion-label class="ion-padding-bottom">Description de la boutique <span class="required">*</span></ion-label>
+          </ion-row>
+          <ion-input class="ion-padding input-spe" placeholder="Saisissez la description de votre boutique (3000 maximum)"></ion-input>
+          <span class="shop-left__infos">Saisissez en quelques mots, l’activité principale de la boutique : 
+                Les produits que vous vendez principalement.
+                Cette description sera le premier lien entre vous et l’utilisateur.
+          </span>
+        </div>
+        <div class="shop-right">
+          <ion-label>Ajouter la photo de la boutique</ion-label>
+          <div class="shop-right__button">
+            <button class="btn btn-primary">Sélectionner le fichier</button>
+          </div>
+            <span>Au format <strong>jpeg/png</strong> uniquement.</span>
+
+          <div class="shop-right__actions">
+            <button class="btn btn-primary-outline">Modifier</button>
+            <button class="btn btn-primary">Valider</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
