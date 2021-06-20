@@ -4,7 +4,7 @@
     <app-menu></app-menu>
   </div>
   <div class="shop-contrib">
-    <h2>Voici votre espace dédié, vous avez la possibilité d’y contribuer 
+    <h2>Voici votre espace dédié, vous avez la possibilité d’y contribuer
     les informations de votre boutique.
     </h2>
     <div class="shop-contrib__items">
@@ -14,19 +14,28 @@
           <ion-row>
             <ion-label class="ion-padding-bottom">Nom de la boutique <span class="required">*</span></ion-label>
           </ion-row>
-          <ion-input class="ion-padding input-spe" placeholder="Saisissez le nom de votre boutique"></ion-input>
+          <ion-input *ngIf="newShop; else elseName" [(ngModel)]="shop.username" class="ion-padding input-spe" placeholder="Saisissez le nom de votre boutique"></ion-input>
+            <ng-template #elseName>
+              <ion-input  class="ion-padding input-spe" [(ngModel)]="shop.username" placeholder="{{ currentShop.username }}"></ion-input>
+            </ng-template>
         </div>
         <div>
           <ion-row>
             <ion-label class="ion-padding-bottom">Numéro de téléphone <span class="required">*</span></ion-label>
           </ion-row>
-          <ion-input class="ion-padding input-spe" placeholder="Saisissez le numéro de votre boutique"></ion-input>
+          <ion-input *ngIf="newShop; else elseMobil" [(ngModel)]="shop.mobile" class="ion-padding input-spe" placeholder="Saisissez le numéro de votre boutique"></ion-input>
+            <ng-template #elseMobil>
+              <ion-input class="ion-padding input-spe" [(ngModel)]="shop.mobile" placeholder="{{currentShop.mobile}}"></ion-input>
+            </ng-template>
         </div>
         <div>
           <ion-row>
             <ion-label class="ion-padding-bottom">Adresse de la boutique <span class="required">*</span></ion-label>
           </ion-row>
-          <ion-input class="ion-padding input-spe" placeholder="Saisissez l'adresse de votre boutique"></ion-input>
+          <ion-input *ngIf="newShop; else elseAddress" [(ngModel)]="shop.address"  class="ion-padding input-spe" placeholder="Saisissez l'adresse de votre boutique"></ion-input>
+            <ng-template #elseAddress>
+              <ion-input class="ion-padding input-spe" [(ngModel)]="shop.address"  placeholder="{{currentShop.address}}"></ion-input>
+            </ng-template>
         </div>
       </div>
       <div class="shop-contrib__items--bottom">
@@ -34,8 +43,11 @@
           <ion-row>
             <ion-label class="ion-padding-bottom">Description de la boutique <span class="required">*</span></ion-label>
           </ion-row>
-          <ion-input class="ion-padding input-spe" placeholder="Saisissez la description de votre boutique (3000 maximum)"></ion-input>
-          <span class="shop-left__infos">Saisissez en quelques mots, l’activité principale de la boutique : 
+          <ion-input *ngIf="newShop; else elseDescription" [(ngModel)]="shop.description" class="ion-padding input-spe" placeholder="Saisissez la description de votre boutique (3000 maximum)"></ion-input>
+            <ng-template #elseDescription>
+             <ion-input class="ion-padding input-spe" [(ngModel)]="shop.description" placeholder="{{ currentShop.description}}"></ion-input>
+            </ng-template>
+          <span class="shop-left__infos">Saisissez en quelques mots, l’activité principale de la boutique :
                 Les produits que vous vendez principalement.
                 Cette description sera le premier lien entre vous et l’utilisateur.
           </span>
@@ -48,8 +60,8 @@
             <span>Au format <strong>jpeg/png</strong> uniquement.</span>
 
           <div class="shop-right__actions">
-            <button class="btn btn-primary-outline">Modifier</button>
-            <button class="btn btn-primary">Valider</button>
+            <button type="submit" class="btn btn-primary-outline" (click)="updateShop()">Modifier</button>
+            <button type="submit" class="btn btn-primary" (click)="createShop()">Valider</button>
         </div>
         </div>
       </div>
