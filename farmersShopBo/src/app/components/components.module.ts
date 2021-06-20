@@ -1,3 +1,4 @@
+import { ProductCardComponent } from './product-card/product-card.component';
 import { RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
@@ -7,6 +8,7 @@ import { MenuComponent } from './menu/menu.component';
 @NgModule({
   declarations: [
     MenuComponent,
+    ProductCardComponent,
   ],
   imports: [
     IonicModule,
@@ -15,6 +17,7 @@ import { MenuComponent } from './menu/menu.component';
   ],
   exports: [
     MenuComponent,
+    ProductCardComponent,
   ],
 })
 export class ComponentsModule { }

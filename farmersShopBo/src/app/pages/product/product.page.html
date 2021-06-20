@@ -1,9 +1,47 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>product</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="product">
+  <div class="product-farmersshop" routerLink="/home" routerDirection="backward"><img src="../../../assets/images/FarmersShop_newLogo.png"></div>
+  <div class="product-menu">
+    <app-menu></app-menu>
+  </div>
+  <div class="product-contrib">
+    <h2>Sur cette page vous avez la possibilité d’y contribuer les informations et valider vos produits.</h2>
+    <div class="product-contrib__items">
+      <p class="p-absolute">Les champs marqués d'un <span class="required">*</span> sont obligatoires.</p>
+      <div class="product-contrib__items--left">
+        <div>
+          <ion-row>
+            <ion-label class="ion-padding-bottom">Nom du produit <span class="required">*</span></ion-label>
+          </ion-row>
+          <ion-input class="ion-padding input-spe" placeholder="Saisissez le nom du produit"></ion-input>
+        </div>
+        <div class="ion-margin-top">
+          <ion-row>
+            <ion-label class="ion-padding-bottom">Description du produit <span class="required">*</span></ion-label>
+          </ion-row>
+          <ion-input class="ion-padding input-spe" placeholder="Saisissez une courte description du produit"></ion-input>
+        </div>
+        <div class="ion-margin-top">
+          <ion-row>
+            <ion-label class="ion-padding-bottom">Ajouter la photo du produit <span class="required">*</span></ion-label>
+          </ion-row>
+          <button class="btn btn-primary">Sélectionner un fichier</button>
+        </div>
+        <div class="product-validate">
+          <button class="btn btn-primary">Valider le produit</button>
+        </div>
+      </div>
+      <div class="product-contrib__items--right">
+        <p>Vous avez <span class="span-link">3</span> produits validés</p>
+        <ion-list>
+          <app-product-card></app-product-card>
+          <app-product-card></app-product-card>
+          <app-product-card></app-product-card>
+        </ion-list>
 
-<ion-content>
-
+        <div>
+          <button class="btn btn-primary">Valider la liste des produits</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </ion-content>

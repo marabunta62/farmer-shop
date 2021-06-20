@@ -3,6 +3,7 @@
   border-radius: 10px;
   --border-radius: 10px;
   font-weight: bold;
+  transition: all 0.3s;
 
   // Primary
   &-primary {
@@ -11,11 +12,25 @@
     --background: var(--ion-color-primary);
     border: 2px solid var(--ion-color-primary);
 
+    &:hover {
+      color: var(--ion-color-primary);
+      background: transparent;
+      --background: transparent;
+      border: 2px solid var(--ion-color-primary);
+    }
+
     &-outline {
       color: var(--ion-color-primary);
       background: transparent;
       --background: transparent;
-      border: 2px solid var(--ion-color-primary)
+      border: 2px solid var(--ion-color-primary);
+
+      &:hover {
+        color: var(--ion-color-primary-contrast);
+        background: var(--ion-color-primary);
+        --background: var(--ion-color-primary);
+        border: 2px solid var(--ion-color-primary);
+      }
     }
   }
   //--
@@ -27,11 +42,25 @@
     --background: var(--ion-color-secondary);
     border: 2px solid var(--ion-color-secondary);
 
-    &-outline {
+    &:hover {
       color: var(--ion-color-secondary);
       background: transparent;
       --background: transparent;
       border: 2px solid var(--ion-color-secondary)
+    }
+
+    &-outline {
+      color: var(--ion-color-secondary);
+      background: transparent;
+      --background: transparent;
+      border: 2px solid var(--ion-color-secondary);
+
+      &:hover {
+        color: #fff;
+        background: var(--ion-color-secondary);
+        --background: var(--ion-color-secondary);
+        border: 2px solid var(--ion-color-secondary);
+      }
     }
   }
   //--
@@ -43,11 +72,55 @@
     --background: var(--ion-background-card-color);
     border: 2px solid var(--ion-background-card-color);
 
+    &:hover {
+      color: var(--ion-background-card-color);
+      background: var(--ion-color-secondary-contrast);
+      --background: var(--ion-color-secondary-contrast);
+      border: 2px solid var(--ion-background-card-color);
+    }
+
     &-outline {
       color: var(--ion-background-card-color);
       background: var(--ion-color-secondary-contrast);
       --background: var(--ion-color-secondary-contrast);
       border: 2px solid var(--ion-background-card-color);
+
+      &:hover {
+        color: var(--ion-color-secondary-contrast);
+        background: var(--ion-background-card-color);
+        --background: var(--ion-background-card-color);
+        border: 2px solid var(--ion-background-card-color);
+      }
+    }
+  }
+  //--
+
+  // Alerte
+  &-alert {
+      color: var(--ion-color-primary-contrast);
+      background: var(--ion-color-danger-tint);
+      --background: var(--ion-color-danger-tint);
+      border: 2px solid var(--ion-color-danger-tint);
+
+      &:hover {
+        color: var(--ion-color-danger-tint);
+        background: transparent;
+        --background: transparent;
+        border: 2px solid var(--ion-color-danger-tint);
+      }
+
+    &-outline {
+      color: var(--ion-color-danger-tint);
+      background: transparent;
+      --background: transparent;
+      border: 2px solid var(--ion-color-danger-tint);
+
+      &:hover {
+        color: var(--ion-color-primary-contrast);
+        background: var(--ion-color-danger-tint);
+        --background: var(--ion-color-danger-tint);
+        border: 2px solid var(--ion-color-danger-tint);
+      }
     }
   }
   //--

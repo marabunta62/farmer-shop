@@ -1,0 +1,31 @@
+<ion-content style="--background: rgba(0,0,0,0.2);">
+  <div class="help-modal__logo">
+    <ion-row class="ion-justify-content-center ion-padding-bottom">
+      <img src="../../../assets/images/search-modal-logo.svg" alt="Farmer's Shop Logo" style="opacity: 0.7;">
+    </ion-row>
+  </div>
+
+  <ion-card>
+    <ion-row class="ion-padding-horizontal"><p style="font-size: 18px; margin: 20px 0 0;"><strong>La bulle d'aide vous accompagne :</strong></p></ion-row>
+    <ion-card-content>
+      <div class="search-modal__infos">
+        <ion-row class="ion-justify-content-center ion-padding-bottom">
+          <ion-icon name="map-outline" style="color: var(--ion-color-primary); font-size: 28px; margin-bottom: 5px;"></ion-icon>
+          <p>
+            Vous pouvez cliquer sur l’adresse et être rédigé sur map afin d’obtenir 
+            l’itinéraire entre vous et <strong style="color: #f5a569;"></strong>.
+          </p>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <ion-icon name="call-outline" style="color: var(--ion-color-primary); font-size: 28px; margin: 10px 0 5px;"></ion-icon>
+          <p>Vous pouvez contacter <strong style="color: #f5a569;"></strong> afin d’en savoir plus sur la boutique,
+             les produits ou encore le stock disponible.</p>
+        </ion-row>
+      </div>
+    </ion-card-content>
+    <ion-row class="ion-justify-content-end ion-padding">
+      <span style="color: var(--ion-color-primary); font-weight: bold;" (click)="dismiss()">J'ai compris</span>
+    </ion-row>
+  </ion-card>
+</ion-content>
+
